@@ -39,6 +39,7 @@ generateEl.addEventListener('click', () => {
 });
 
 function generatePassword(lower, upper, number, symbol, length) {
+	if(length>20 || length<1)return "error";
 	let generatedPassword = '';
 	const typesCount = lower + upper + number + symbol;
 	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
