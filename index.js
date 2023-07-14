@@ -39,7 +39,7 @@ generateEl.addEventListener('click', () => {
 });
 
 function generatePassword(lower, upper, number, symbol, length) {
-	if(length>50)return "Invalid Length";
+	if(length>50)return "Error: Invalid Input Length";
 	let generatedPassword = '';
 	const typesCount = lower + upper + number + symbol;
 	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
